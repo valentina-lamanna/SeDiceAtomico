@@ -1,0 +1,10 @@
+import Centrales.*
+describe "group of tests" {
+
+	test "burns con 10 varillas produce 1 Mkwh en springfield." {
+        burns.cantidadDeVarillas(10)
+        
+		assert.equals(1, burns.produccionEnergetica())
+
+	}
+}
