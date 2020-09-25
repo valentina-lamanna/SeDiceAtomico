@@ -1,12 +1,12 @@
 import springfield.*
 import Centrales.*
 describe "group of tests" {
-
+      //1
 	test "burns con 10 varillas produce 1 Mkwh en springfield." {
         burns.cantidadDeVarillas(10)
        assert.equals(1, burns.produccionEnergetica(springfield))
       }
-	
+	//2
 	test "suspiro no es contaminante"{
 		assert.notThat( suspiro.contaminacion())
 	}
@@ -23,9 +23,12 @@ describe "group of tests" {
 		burns.cantidadDeVarillas(20)
 		assert.notThat( ex_bosque.contaminacion())
 	}
-	
+	//3
 	test "Springfield no cubrió sus necesidades con su suministro"{
 		assert.notThat(springfield.cubrioNecesidades())
 	}
-	
+	//4
+	test "Springfield no  esta al horno "{
+		assert.notThat(springfield.estaAlHorno())		
+	}
 }
