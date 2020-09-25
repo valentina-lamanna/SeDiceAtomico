@@ -7,4 +7,22 @@ describe "group of tests" {
 		assert.equals(1, burns.produccionEnergetica())
 
 	}
+	
+	test "suspiro no es contaminante"{
+		assert.notThat( suspiro.contaminacion())
+	}
+	
+	test "ex_bosque  es contaminante"{
+		assert.that( ex_bosque.contaminacion())
+	}
+	
+	test "burns  es contaminante si tiene 21 barillas"{
+		burns.cantidadDeVarillas(21)
+		assert.that( ex_bosque.contaminacion())
+	}
+	test "burns  no es contaminante si tiene 20 barillas"{
+		burns.cantidadDeVarillas(20)
+		assert.notThat( ex_bosque.contaminacion())
+	}
+	
 }
